@@ -52,3 +52,8 @@ db.mongoose
   console.log(`Example *****app listening on port http://localhost:8080`);
 
   npm i multer
+
+
+git init
+
+git status
