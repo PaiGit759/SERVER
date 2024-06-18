@@ -97,3 +97,20 @@ export const getTask = async (req, res) => {
     }
 };
 
+
+export const getAllTask = async (req, res) => {
+    try {
+
+
+        const task = await Task.find();
+
+        if (!task) {
+            res.status(404).json({ message: 'Task not found' });
+        };
+
+        return res.status(200).json(task);
+
+    } catch {
+        res.status(400).json({ message: 'Failed find all tasks' });
+    }
+};
